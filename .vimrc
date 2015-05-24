@@ -18,8 +18,10 @@ set mouse=a
 syntax enable
 syntax on
 "set colorscheme
-colorscheme elflord
-"colorscheme default
+""colorscheme elflord
+""colorscheme molokai  
+colorscheme solarized  
+""colorscheme default
 "endif
 """""""""""""""""""""""""""""""""""""
 " VIM userinterface
