@@ -5,8 +5,8 @@ export ZSH=/Users/ranran/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
+#ZSH_THEME="apple"
 #ZSH_THEME="powerline"
 
 
@@ -99,3 +99,6 @@ alias showhidden='defaults write com.apple.finder AppleShowAllFiles -boolean tru
 alias hidden='defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
+# reboot or killall Dock
+alias disdashboard='defaults write com.apple.dashboard mcx-disabled -boolean YES'
+alias endashboard='defaults write com.apple.dashboard mcx-disabled -boolean NO'
