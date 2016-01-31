@@ -328,6 +328,7 @@ set laststatus=2
 "let g:airline#extensions#tabline#enabled = 1
 "https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
