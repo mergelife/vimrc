@@ -273,24 +273,16 @@ nmap <C-_>i :cs find i <C-R>=expand("<cword>")<CR><CR>
 
 
 "auto add database
-if has("cscope")
-    set csprg=/usr/local/bin/cscope
-    set csto=0
-    set cst
-    set csverb
-    set cspc=3
-    "add any database in current dir
-    if filereadable("cscope.out")
-        cs add cscope.out
-    "else search cscope.out elsewhere
-    else
-        let cscope_file=findfile("cscope.out",".;")
-        let cscope_pre=matchstr(cscope_file,".*/")
-        if !empty(cscope_file)&&filereadable(cscope_file)
-            exe "cs add" cscope_file cscope_pre
-        endif
-    endif
-endif
+function! LoadCscope()
+	let db = findfile("cscope.out", ".;")
+	if (!empty(db))
+		let path = strpart(db, 0, match(db, "/cscope.out$"))
+		set nocscopeverbose " suppress 'duplicate connection' error
+		exe "cs add " . db . " " . path
+		set cscopeverbose
+	endif
+endfunction
+call LoadCscope()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " lookupfile
