@@ -63,7 +63,7 @@ set wildmenu
 "Always show current position
 set ruler
 "The commandbar is 2 high
-set cmdheight=2
+set cmdheight=1
 "Show line number
 set nu
 "Set backspace
@@ -129,6 +129,7 @@ else
 endif
 
 "选中状态下 Ctrl+c 复制
+"for Linux
 "vmap <C-c> "+y
 "for MacOS
 set clipboard+=unnamed
