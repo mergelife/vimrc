@@ -207,6 +207,9 @@ nmap <F7> :cp<CR>
 nmap <F8> :cn<CR>
 nmap <F6> :cw<CR>
 "===== grep =====
+let Grep_Skip_Dirs = '.git .svn'
+let Grep_Skip_Files = 'tags *.patch'
+set grepprg=/usr/bin/grep\ -nH
 nnoremap <silent> <F3> :Grep<CR>
 
 "===== supertab =====
