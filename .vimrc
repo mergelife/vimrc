@@ -1,4 +1,34 @@
 ".vimrc
+
+" For vundle
+set nocompatible              " be iMproved, required
+filetype off                  " required
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')"
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+" filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -19,8 +49,8 @@ syntax enable
 syntax on
 "set colorscheme
 ""colorscheme elflord
-""colorscheme molokai  
-colorscheme solarized  
+colorscheme molokai  
+""colorscheme solarized  
 ""colorscheme default
 "endif
 """""""""""""""""""""""""""""""""""""
@@ -57,26 +87,6 @@ set fdl=0
 """""""""""""""""""""""""""""""""""""
 " Text options
 """""""""""""""""""""""""""""""""""""
-"set expandtab
-set shiftwidth=2
-set ambiwidth=double
-set smarttab
-set ts=4
-set lbr
-set tw=500
-set selection=inclusive
-   """""""""""""""""""""""""""""" " Indent
-   """"""""""""""""""""""""""""""
-   "Auto indent
-   set ai
-   "Set auto indent width = 4 spaces
-   set sw=4
-   "Smart indet
-   set si
-   "C-style indenting
-  " set cindent "usage: select codes, press '=' key, the codes will autoindenting
-   "Wrap lines
-   set wrap
 "Encoding settings
 if has("multi_byte")
     " Set fileencoding priority
@@ -131,7 +141,7 @@ set ignorecase
 "For ctags, then it can find the 'tags' file even not in current directory
 set tags=tags;/
 "map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbq;filenametags.sh<CR>
-map <C-_>q :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbq;filenametags.sh<CR>
+map <C-_>q :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbkq;filenametags.sh<CR>
 
 "===== Tlist =====
 ""if &diff
@@ -151,7 +161,7 @@ let Tlist_Exit_OnlyWindow=1
 
 "===== 自动补全 =====
 set nocp
-filetype plugin on
+"filetype plugin on
 "filetype plugin indent on
 "set completeopt=longest,menu
 
@@ -290,7 +300,7 @@ let g:LookupFile_PreserveLastPattern = 0        "不保存上次查找的字符�
 let g:LookupFile_PreservePatternHistory = 1     "保存查找历史
 let g:LookupFile_AlwaysAcceptFirst = 1          "回车打开第一个匹配项目
 let g:LookupFile_AllowNewFiles = 0              "不允许创建不存在的文件
-"if filereadable("./filenametags")              "设置tag文件的名字
+"if filereadable("./filenametags")               "设置tag文件的名字
 "	let g:LookupFile_TagExpr = '"./filenametags"'
 "endif
 "auto add filenametags
@@ -310,3 +320,8 @@ nmap <silent> <leader>lk :LookupFile<cr>
 nmap <silent> <leader>ll :LUBufs<cr>
 "映射LUWalk为,lw
 nmap <silent> <leader>lw :LUWalk<cr>
+
+set tabstop=4
+
+set laststatus=2
+map <F8> :Tagbar<CR>
