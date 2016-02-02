@@ -298,7 +298,7 @@ let g:LookupFile_PreserveLastPattern = 0        "不保存上次查找的字符�
 let g:LookupFile_PreservePatternHistory = 1     "保存查找历史
 let g:LookupFile_AlwaysAcceptFirst = 1          "回车打开第一个匹配项目
 let g:LookupFile_AllowNewFiles = 0              "不允许创建不存在的文件
-"if filereadable("./filenametags")               "设置tag文件的名字
+"if filereadable("./filenametags")              "设置tag文件的名字
 "	let g:LookupFile_TagExpr = '"./filenametags"'
 "endif
 "auto add filenametags
