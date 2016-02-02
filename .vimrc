@@ -10,6 +10,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
 " alternatively, pass a path where Vundle should install plugins
 " "call vundle#begin('~/some/path/here')"
 " All of your Plugins must be added before the following line

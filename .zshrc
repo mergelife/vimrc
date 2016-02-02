@@ -58,8 +58,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/op
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
+export LANG=en_US.UTF-8
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -92,7 +91,12 @@ alias cd7='cd ../../../../../..'
 alias ls='ls -G'
 alias ll='ls -laG'
 
+# Emacs
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias em='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias ec='emacsclient'
+alias es='emacs --daemon'
+
 alias lsusb='system_profiler SPUSBDataType'
 
 alias showhidden='defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder'
@@ -102,3 +106,23 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 # reboot or killall Dock
 alias disdashboard='defaults write com.apple.dashboard mcx-disabled -boolean YES'
 alias endashboard='defaults write com.apple.dashboard mcx-disabled -boolean NO'
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/Volumes/resource/resource/coco2d-x/cocos2d-x/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+export COCOS_TEMPLATES_ROOT=/Volumes/resource/resource/coco2d-x/cocos2d-x/templates
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+#export ANDROID_SDK_ROOT=/Volumes/resource/resource/Android/master/prebuilts/devtools
+#export PATH=$ANDROID_SDK_ROOT:$PATH
+#export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/Volumes/resource/resource/coco2d-x/v3.2/cocos2d-x-3.2/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+# For rtags
+export EMACS_RTAGS_SRC_ROOT=/Volumes/resource/resource/rtags/rtags/bin
+export PATH=$EMACS_RTAGS_SRC_ROOT:/Users/ranran/bin:$PATH
