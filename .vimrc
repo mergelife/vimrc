@@ -334,3 +334,8 @@ let g:airline_powerline_fonts = 1
 " Tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F8> :Tagbar<CR>
+
+" For tmux
+if exists('$TMUX')
+    set term=screen-256color
+endif
