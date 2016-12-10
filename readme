@@ -1,0 +1,5 @@
+1. 下载powerline字体,安装后在terminal更改字体后生效;
+    https://github.com/powerline/fonts
+
+2. 下载Vundle.vim
+	
