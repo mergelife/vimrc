@@ -145,3 +145,6 @@ export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
 #use vi for terminal
 #set -o vi
+
+# For ubuntu tmux color
+export TERM="screen-256color"
