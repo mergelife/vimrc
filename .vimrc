@@ -143,8 +143,8 @@ set ignorecase
 "===== ctags =====
 "For ctags, then it can find the 'tags' file even not in current directory
 set tags=tags;/
-"map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbq;filenametags.sh<CR>
-map <C-_>q :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbkq;filenametags.sh<CR>
+map <C-_>q :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbq;filenametags.sh<CR>
+"map <C-_>q :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .;cscope -Rbkq;filenametags.sh<CR>
 
 "===== Tlist =====
 ""if &diff
